@@ -20,5 +20,8 @@
     "chai": "^3.5.0",
     "mocha": "^3.4.2",
     "webpack": "^3.3.0"
+  },
+  "dependencies": {
+    "@letakeane/basic-sorts": "git+https://github.com/letakeane/basic-sorts.git"
   }
 }

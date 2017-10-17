@@ -10,4 +10,4 @@ const insertionSort = (array) => {
   return array
 }
 
-// export insertionSort;
+module.exports = insertionSort;
