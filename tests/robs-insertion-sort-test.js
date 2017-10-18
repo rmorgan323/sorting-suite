@@ -17,6 +17,11 @@ describe('Rob\'s Insertion Sort', () => {
 		assert.deepEqual( robsInsertionSort(array), ['a', 'b', 'c', 'd', 'e', 'f', 'i', 'k', 'l', 'm', 'p', 'r', 's', 't', 'x'] )
 	})
 
+	it('should sort an array that includes positive AND negative numbers', function() {
+		const array = [-13, 76, 14, -41, 19, -33, -91, 31, 6, -65, 83, -9, -57];
+		assert.deepEqual(robsInsertionSort(array), [-91, -65, -57, -41, -33, -13, -9, 6, 14, 19, 31, 76, 83])
+	})
+
 	it('should sort an array of 10,000 values', function() {
 	  let array = [];
 	  for (let i = 0; i < 10000; i++) {

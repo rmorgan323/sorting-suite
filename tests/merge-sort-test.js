@@ -17,6 +17,11 @@ describe('Merge Sort', () => {
 		assert.deepEqual( mergeSort(array), ['a', 'b', 'c', 'd', 'e', 'f', 'i', 'k', 'l', 'm', 'p', 'r', 's', 't', 'x'] )
 	})
 
+	it('should sort an array that includes positive AND negative numbers', function() {
+		const array = [-13, 76, 14, -41, 19, -33, -91, 31, 6, -65, 83, -9, -57];
+		assert.deepEqual(mergeSort(array), [-91, -65, -57, -41, -33, -13, -9, 6, 14, 19, 31, 76, 83])
+	})
+
 	it('should sort an array of 50,000 values', function() {
 	  let array = [];
 	  for (let i = 0; i < 50000; i++) {
