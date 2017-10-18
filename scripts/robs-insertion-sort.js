@@ -4,6 +4,7 @@ const robsInsertionSort = (array) => {
       this.splice( index, 0, item );
   };
 
+  let arraySorted = [];
   let z = array.length
 
   for (let i = 0; i < z; i++) {
@@ -25,4 +26,7 @@ const robsInsertionSort = (array) => {
       })
     }
   }
+  return arraySorted;
 }
+
+module.exports = robsInsertionSort;

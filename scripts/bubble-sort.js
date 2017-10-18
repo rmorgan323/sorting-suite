@@ -23,4 +23,4 @@ const bubbleSort = (array) => {
   return array
 }
 
-// export bubbleSort
+module.exports = bubbleSort;
