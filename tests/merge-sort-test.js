@@ -32,13 +32,13 @@ describe('Merge Sort', () => {
 	  //Took 185ms
 	});
 
-	it('should sort an array of 100,000 values', function() {
+	it('should sort an array of 500,000 values', function() {
 	  let array = [];
-	  for (let i = 0; i < 100000; i++) {
-	  	let randomNum = Math.floor(Math.random() * 200000);
+	  for (let i = 0; i < 500000; i++) {
+	  	let randomNum = Math.floor(Math.random() * 1000000);
 	  	array.push(randomNum);
 	  }
 	  assert.deepEqual( mergeSort(array), array.sort((a, b) => a - b))
-	  //Took 292ms
+	  //Took 1481ms
 	});
 })
