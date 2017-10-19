@@ -1,31 +1,30 @@
 function mergeSort(array) {
   
-  if(array.length <= 1) {
+  if (array.length <= 1)
     return array;
-  }
 
-  const midpoint = Math.floor(array.length/2);
-  const a = array.slice(0, midpoint);
-  const b = array.slice(midpoint, array.length);
-  return merge(mergeSort(a), mergeSort(b));
+  let midpoint = Math.floor(array.length / 2);
+  let arrayLeft = array.slice(0,midpoint);
+  let arrayRight = array.slice(midpoint);
+
+  return merge(mergeSort(arrayLeft),mergeSort(arrayRight));
 }
 
-function merge(a,b) {
+function merge(left, right) {
+
   let result = [];
-  while (a.length && b.length) {
-    if (a[0] <= b[0]) {
-      result.push(a.shift());
-    } else {
-      result.push(b.shift());
+  let indexLeft = 0;
+  let indexRight = 0;
+
+  while(indexLeft < left.length && indexRight < right.length){
+    if(left[indexLeft] < right[indexRight]){
+      result.push(left[indexLeft++]);
     }
-  }
-  while (a.length) {
-    result.push(a.shift());
-  }
-  while (b.length) {
-    result.push(b.shift());
-  }
-  return result;
+    else{
+      result.push(right[indexRight++]);
+    }
+  }  
+  return result.concat(left.slice(indexLeft)).concat(right.slice(indexRight));
 }
 
 module.exports = mergeSort;
